@@ -1,0 +1,55 @@
+<Window x:Class="OmdbClient.Views.EditarDetalleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Editar Detalle de Película"
+        Height="600"
+        Width="600"
+        WindowStartupLocation="CenterScreen">
+
+	<ScrollViewer Margin="20">
+		<StackPanel>
+
+			<TextBlock Text="Título:" FontWeight="Bold"/>
+			<TextBox x:Name="TitleBox" Margin="0,0,0,10"/>
+
+			<TextBlock Text="Año:" FontWeight="Bold"/>
+			<TextBox x:Name="YearBox" Margin="0,0,0,10"/>
+
+			<TextBlock Text="Género:" FontWeight="Bold"/>
+			<TextBox x:Name="GenreBox" Margin="0,0,0,10"/>
+
+			<TextBlock Text="Director:" FontWeight="Bold"/>
+			<TextBox x:Name="DirectorBox" Margin="0,0,0,10"/>
+
+			<TextBlock Text="Actores:" FontWeight="Bold"/>
+			<TextBox x:Name="ActorsBox" Margin="0,0,0,10"/>
+
+			<TextBlock Text="Sinopsis:" FontWeight="Bold"/>
+			<TextBox x:Name="PlotBox"
+                     Margin="0,0,0,10"
+                     AcceptsReturn="True"
+                     Height="80"
+                     TextWrapping="Wrap"/>
+
+			<TextBlock Text="Poster URL o archivo:" FontWeight="Bold"/>
+			<TextBox x:Name="PosterBox" Margin="0,0,0,10"/>
+
+			<!-- Vista previa del póster -->
+			<TextBlock Text="Vista previa del póster:" FontWeight="Bold" Margin="0,10,0,5"/>
+			<Image x:Name="PosterImage" Height="200" Stretch="Uniform" Margin="0,0,0,10"/>
+
+			<!-- Botón para seleccionar imagen local -->
+			<Button Content="Seleccionar imagen..."
+                    Width="150"
+                    HorizontalAlignment="Left"
+                    Margin="0,0,0,10"
+                    Click="SeleccionarImagen_Click"/>
+
+			<!-- Botón Guardar -->
+			<Button Content="Guardar cambios"
+                    Width="140"
+                    HorizontalAlignment="Center"
+                    Click="Guardar_Click"/>
+		</StackPanel>
+	</ScrollViewer>
+</Window>

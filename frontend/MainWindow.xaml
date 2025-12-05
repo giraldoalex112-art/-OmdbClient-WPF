@@ -1,0 +1,36 @@
+﻿<Window x:Class="OmdbClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OMDb Client" Height="520" Width="640" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+
+        <!-- Panel superior con campos de entrada -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Vertical" Margin="8">
+            <TextBox x:Name="ImdbBox" Margin="0,0,0,8" />
+            <TextBox x:Name="TituloBox" Margin="0,0,0,8" />
+            <TextBox x:Name="AnioBox" Margin="0,0,0,8" />
+            <TextBox x:Name="PosterBox" Margin="0,0,0,8" />
+
+            <!-- Botones principales en una sola fila -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,8">
+                <Button Content="Agregar película" Click="Agregar_Click" Margin="5" Width="140"/>
+                <Button Content="Listar favoritas" Click="Listar_Click" Margin="5" Width="140"/>
+                <Button Content="Eliminar seleccionada" Click="Eliminar_Click" Margin="5" Width="140"/>
+                <Button Content="Favoritas" Click="AbrirFavoritas_Click" Margin="5" Width="140"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Lista de favoritas -->
+        <ListView x:Name="FavoritasList" Margin="8" SelectionMode="Single">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}" Width="50"/>
+                    <GridViewColumn Header="ImdbID" DisplayMemberBinding="{Binding ImdbID}" Width="100"/>
+                    <GridViewColumn Header="Título" DisplayMemberBinding="{Binding Titulo}" Width="200"/>
+                    <GridViewColumn Header="Año" DisplayMemberBinding="{Binding Year}" Width="80"/>
+                    <GridViewColumn Header="Poster" DisplayMemberBinding="{Binding Poster}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</Window>

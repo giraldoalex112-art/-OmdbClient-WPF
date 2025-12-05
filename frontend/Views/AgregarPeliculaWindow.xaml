@@ -1,0 +1,42 @@
+<Window x:Class="OmdbClient.Views.AgregarPeliculaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Agregar Película"
+        Height="360"
+        Width="420"
+        WindowStartupLocation="CenterScreen">
+
+	<Grid Margin="20">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+		<!-- Campos de entrada -->
+		<TextBox x:Name="ImdbBox" Grid.Row="0" Margin="0,0,0,10" ToolTip="Ingrese el ImdbID"/>
+		<TextBox x:Name="TituloBox" Grid.Row="1" Margin="0,0,0,10" ToolTip="Ingrese el título"/>
+		<TextBox x:Name="AnioBox" Grid.Row="2" Margin="0,0,0,10" ToolTip="Ingrese el año"/>
+
+		<!-- Campo para URL del póster -->
+		<TextBox x:Name="PosterBox" Grid.Row="3" Margin="0,0,0,10" ToolTip="Ingrese la URL del póster"/>
+
+		<!-- Botón para seleccionar imagen local -->
+		<Button Content="Seleccionar póster..."
+                Grid.Row="4"
+                Width="150"
+                HorizontalAlignment="Left"
+                Click="SeleccionarPoster_Click"/>
+
+		<!-- Botón Guardar -->
+		<Button Content="Guardar"
+                Grid.Row="5"
+                Width="100"
+                HorizontalAlignment="Center"
+                Margin="0,10,0,0"
+                Click="Guardar_Click"/>
+	</Grid>
+</Window>

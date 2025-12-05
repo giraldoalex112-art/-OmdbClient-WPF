@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<!-- Tipo de salida: aplicación de escritorio -->
+		<OutputType>WinExe</OutputType>
+
+		<!-- Framework objetivo: WPF sobre .NET 8 -->
+		<TargetFramework>net8.0-windows</TargetFramework>
+
+		<!-- Activar soporte para WPF -->
+		<UseWPF>true</UseWPF>
+
+		<!-- Opciones modernas de C# -->
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Metadatos del ensamblado -->
+		<AssemblyTitle>OmdbClient.WPF</AssemblyTitle>
+		<AssemblyCompany>Universidad de Caldas</AssemblyCompany>
+		<AssemblyProduct>OmdbClient.WPF</AssemblyProduct>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+
+		<!-- Evitar problemas de apphost bloqueado -->
+		<UseAppHost>true</UseAppHost>
+	</PropertyGroup>
+
+</Project>
