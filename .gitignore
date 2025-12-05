@@ -1,0 +1,18 @@
+# IDE y cachés
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+
+# Artefactos de compilación
+bin/
+obj/
+Debug/
+Release/
+TestResults/
+
+# SO y herramientas
+*.DS_Store
+.idea/
+packages/
